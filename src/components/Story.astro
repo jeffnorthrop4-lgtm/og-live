@@ -1,0 +1,201 @@
+<section class="band" aria-labelledby="work-title">
+  <p class="kicker">The work</p>
+  <div>
+    <h2 id="work-title">Disease turns a season of investment into an uncertain harvest.</h2>
+    <p class="copy">
+      OG is working to improve that foundation: more resilient lines, designed for the realities of
+      commercial aquaculture. Better genetics can reach farms through the seed they already buy.
+    </p>
+  </div>
+</section>
+
+<section class="band band-surface" aria-labelledby="platform-title">
+  <p class="kicker">The platform</p>
+  <div>
+    <h2 id="platform-title">Switchpoint</h2>
+    <p class="copy">
+      Switchpoint finds candidate control points in innate immunity, tests them, and translates what
+      holds up into improved lines.
+    </p>
+    <ol class="steps">
+      <li>
+        <strong>Find</strong>
+        <span>Candidate control points in innate immunity.</span>
+      </li>
+      <li>
+        <strong>Test</strong>
+        <span>What holds up.</span>
+      </li>
+      <li>
+        <strong>Translate</strong>
+        <span>Improved lines.</span>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<section class="band" aria-labelledby="product-title">
+  <p class="kicker">The product</p>
+  <div>
+    <h2 id="product-title">A more resilient oyster line, delivered as triploid seed.</h2>
+    <dl class="spec">
+      <div>
+        <dt>First species</dt>
+        <dd>Eastern oyster</dd>
+      </div>
+      <div>
+        <dt>Business</dt>
+        <dd>Proprietary broodstock and recurring seed production</dd>
+      </div>
+      <div>
+        <dt>Operation</dt>
+        <dd>No direct farm operation</dd>
+      </div>
+    </dl>
+    <p class="horizon">
+      Oysters are the start. Another species needs its own discovery, validation, and commercial path.
+    </p>
+  </div>
+</section>
+
+<style>
+  .band {
+    display: grid;
+    gap: 1.25rem;
+    padding: clamp(4.5rem, 11vw, 8.5rem) 1.5rem;
+    border-top: 1px solid #ccd5c8;
+  }
+
+  .band-surface {
+    background: #f0f0ec;
+  }
+
+  .kicker {
+    margin: 0;
+    color: #1a6b5a;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    line-height: 1.4;
+    text-transform: uppercase;
+  }
+
+  h2 {
+    max-width: 12em;
+    margin: 0;
+    font-size: clamp(2.15rem, 5.4vw, 4.35rem);
+    font-weight: 500;
+    letter-spacing: -0.045em;
+    line-height: 1.02;
+    text-wrap: balance;
+  }
+
+  .copy {
+    max-width: 38rem;
+    margin: 1.5rem 0 0;
+    font-size: clamp(1.05rem, 1.5vw, 1.25rem);
+    line-height: 1.55;
+  }
+
+  .steps {
+    display: grid;
+    gap: 0;
+    margin: clamp(2.5rem, 6vw, 4.5rem) 0 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .steps li {
+    display: flex;
+    flex-direction: column;
+    gap: 0.65rem;
+    padding: 1.35rem 0 1.5rem;
+    border-top: 1px solid #ccd5c8;
+  }
+
+  .steps strong {
+    font-size: clamp(2.4rem, 5vw, 3.75rem);
+    font-weight: 500;
+    letter-spacing: -0.05em;
+    line-height: 0.95;
+  }
+
+  .steps span {
+    max-width: 16rem;
+    color: #24312c;
+    font-size: 1rem;
+    line-height: 1.45;
+  }
+
+  .spec {
+    margin: clamp(2.25rem, 5vw, 3.5rem) 0 0;
+  }
+
+  .spec div {
+    display: grid;
+    gap: 0.35rem;
+    padding: 1.15rem 0;
+    border-top: 1px solid #ccd5c8;
+  }
+
+  .spec dt {
+    margin: 0;
+    color: #1a6b5a;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    line-height: 1.4;
+    text-transform: uppercase;
+  }
+
+  .spec dd {
+    margin: 0;
+    font-size: clamp(1.35rem, 2.4vw, 2rem);
+    font-weight: 500;
+    letter-spacing: -0.035em;
+    line-height: 1.15;
+    text-wrap: balance;
+  }
+
+  .horizon {
+    max-width: 22em;
+    margin: clamp(2.5rem, 6vw, 4rem) 0 0;
+    font-size: clamp(1.65rem, 3vw, 2.35rem);
+    font-weight: 500;
+    letter-spacing: -0.04em;
+    line-height: 1.15;
+    text-wrap: balance;
+  }
+
+  @media (min-width: 48rem) {
+    .band {
+      grid-template-columns: 9.5rem minmax(0, 1fr);
+      column-gap: 3rem;
+      align-items: start;
+      padding-inline: 2.5rem;
+    }
+
+    .steps li {
+      padding-right: 1.5rem;
+    }
+
+    .spec div {
+      grid-template-columns: 11rem minmax(0, 1fr);
+      gap: 2rem;
+      align-items: baseline;
+    }
+  }
+
+  @media (min-width: 64rem) {
+    .steps {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 2.5rem;
+    }
+  }
+
+  @media (max-width: 23.5rem) {
+    .band {
+      padding-inline: 1.15rem;
+    }
+  }
+</style>
