@@ -1,0 +1,89 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --color-bg: #f7f7f4;
+  --color-fg: #000;
+  --color-surface: #f0f0ec;
+  --color-accent: #1a6b5a;
+  --color-accent-light: #2a8b74;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-fg);
+  font-family: var(--font-sans);
+}
+
+::selection {
+  color: #f7f7f4;
+  background: #000;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+h1 {
+  margin: 0;
+  animation: hero-in 1s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+#hero-canvas {
+  display: block;
+  max-width: 100%;
+}
+
+.site-footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  min-height: 104px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-top: 1px solid #ccd5c8;
+  font-size: 14px;
+}
+
+.site-footer a {
+  display: inline-flex;
+  align-items: center;
+  gap: 18px;
+  min-height: 44px;
+  padding: 11px 0;
+  text-decoration: underline;
+  text-underline-offset: 5px;
+  text-decoration-thickness: 1px;
+}
+
+.site-footer a:hover {
+  color: #789547;
+}
+
+.site-footer a:focus-visible {
+  outline: 3px solid #7c922a;
+  outline-offset: 5px;
+}
+
+@keyframes hero-in {
+  from {
+    opacity: 0;
+    transform: translateY(1.25rem);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  h1 {
+    animation: none;
+  }
+}
