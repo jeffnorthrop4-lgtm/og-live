@@ -5,8 +5,12 @@
   --color-bg: #f7f7f4;
   --color-fg: #000;
   --color-surface: #f0f0ec;
-  --color-accent: #1a6b5a;
-  --color-accent-light: #2a8b74;
+  --color-og: #1a6b5a;
+  --color-og-light: #2a8b74;
+}
+
+.text-og {
+  color: #1a6b5a;
 }
 
 html {
