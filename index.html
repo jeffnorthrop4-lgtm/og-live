@@ -39,24 +39,11 @@
     @media (prefers-reduced-motion: reduce) {
       h1 { animation: none; }
     }
-    .nav-link {
-      display: inline-flex;
-      align-items: center;
-      min-height: 44px;
-      font-size: 14px;
-      letter-spacing: -0.01em;
-      text-decoration: underline;
-      text-underline-offset: 5px;
-      text-decoration-thickness: 1px;
-    }
-    .nav-link:hover { color: #789547; }
-    .nav-link:focus-visible { outline: 3px solid #7c922a; outline-offset: 5px; }
   </style></head> <body class="min-h-screen overflow-x-hidden">
   <nav class="flex w-full items-center justify-between px-6 py-4 md:px-10">
     <a href="/" class="flex h-12 w-12 items-center justify-center bg-fg" aria-label="Oyster Genomics">
       <span class="text-base font-semibold tracking-tight text-bg">OG</span>
     </a>
-    <a class="nav-link" href="/overview/">Overview</a>
   </nav>
   <section class="hero relative h-[calc(100svh-5rem)] md:h-[calc(100svh-5rem)] flex items-end px-6 pb-12 md:px-10 md:pb-24">
     <canvas id="hero-canvas" class="pointer-events-none absolute inset-0 h-full w-full"></canvas>
