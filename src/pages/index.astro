@@ -1,6 +1,5 @@
 ---
 import Base from "../layouts/Base.astro";
-import Footer from "../components/Footer.astro";
 ---
 
 <Base>
@@ -17,7 +16,11 @@ import Footer from "../components/Footer.astro";
       </h1>
     </div>
   </section>
-  <Footer />
+  <footer class="site-footer px-6 md:px-10">
+    <a href="mailto:jeff@oystergenomics.com" aria-label="Email Jeff at Oyster Genomics">
+      Contact <span aria-hidden="true">↗</span>
+    </a>
+  </footer>
 </Base>
 
 <script>
