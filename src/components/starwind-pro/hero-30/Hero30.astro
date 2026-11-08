@@ -1,0 +1,103 @@
+---
+import IconArrowRight from "@tabler/icons/outline/arrow-right.svg";
+import type { ComponentProps, HTMLAttributes } from "astro/types";
+import { tv } from "tailwind-variants";
+
+import { Badge } from "@/components/starwind/badge";
+import { Button } from "@/components/starwind/button";
+import ShaderAuroraVeil from "@/components/starwind-pro/shader-aurora-veil/ShaderAuroraVeil.astro";
+
+interface Props extends HTMLAttributes<"section"> {
+  /** Eyebrow text above the heading */
+  badge?: string;
+  /** Main heading */
+  heading?: string;
+  /** Supporting description */
+  description?: string;
+  /** Primary button text */
+  primaryButtonText?: string;
+  /** Primary button href */
+  primaryButtonHref?: string;
+  /** Secondary button text (renders only when provided) */
+  secondaryButtonText?: string;
+  /** Secondary button href */
+  secondaryButtonHref?: string;
+  /** Props forwarded to the Aurora Veil shader background */
+  shaderProps?: ComponentProps<typeof ShaderAuroraVeil>;
+}
+
+const hero30Styles = tv({
+  base: "@container bg-background text-foreground relative isolate flex w-full flex-col justify-end overflow-hidden p-4 pb-12",
+});
+
+const {
+  badge,
+  heading = "Know the moment the sky lights up",
+  description,
+  primaryButtonText,
+  primaryButtonHref = "#",
+  secondaryButtonText,
+  secondaryButtonHref = "#",
+  shaderProps = {},
+  class: className,
+  ...rest
+} = Astro.props;
+---
+
+<section class={hero30Styles({ class: className })} {...rest}>
+  <!-- The canvas extends above the section so the veil hangs near the top edge. -->
+  <ShaderAuroraVeil class="-top-[45%] bottom-auto h-[145%]" {...shaderProps} />
+  <div
+    class="from-background via-background/80 pointer-events-none absolute inset-x-0 bottom-0 h-3/5 bg-linear-to-t to-transparent"
+    aria-hidden="true"
+  >
+  </div>
+
+  <div
+    class="relative z-10 mx-auto flex min-h-[600px] w-full max-w-7xl flex-col justify-end @3xl:min-h-[680px]"
+  >
+    <div
+      class="grid gap-8 @3xl:grid-cols-[minmax(0,1.5fr)_minmax(0,1fr)] @3xl:items-end @3xl:gap-16"
+    >
+      <div>
+        {
+          badge && (
+            <Badge tone="primary-accent" appearance="text" eyebrow>
+              {badge}
+            </Badge>
+          )
+        }
+        <h1
+          class="font-heading mt-4 text-4xl font-semibold tracking-tight text-balance @xl:text-5xl @3xl:text-7xl"
+        >
+          {heading}
+        </h1>
+      </div>
+
+      {
+        (description || primaryButtonText || secondaryButtonText) && (
+          <div class="@3xl:pb-2">
+            {description && <p class="text-muted-foreground text-pretty @xl:text-lg">{description}</p>}
+            {
+              (primaryButtonText || secondaryButtonText) && (
+                <div class="mt-8 flex flex-col gap-3 @md:flex-row">
+                  {primaryButtonText && (
+                    <Button href={primaryButtonHref} variant="primary" class="group">
+                      {primaryButtonText}
+                      <IconArrowRight class="transition-transform group-hover:translate-x-0.5" />
+                    </Button>
+                  )}
+                  {secondaryButtonText && (
+                    <Button variant="ghost" href={secondaryButtonHref}>
+                      {secondaryButtonText}
+                    </Button>
+                  )}
+                </div>
+              )
+            }
+          </div>
+        )
+      }
+    </div>
+  </div>
+</section>

@@ -1,0 +1,14 @@
+---
+interface Props {
+  current?: "science";
+}
+
+const { current } = Astro.props;
+---
+
+<footer class="site-footer px-6 md:px-10">
+  <a href="/science/" aria-current={current === "science" ? "page" : undefined}>Science</a>
+  <a href="mailto:jeff@oystergenomics.com" aria-label="Email Jeff at Oyster Genomics">
+    Contact <span aria-hidden="true">↗</span>
+  </a>
+</footer>

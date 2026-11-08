@@ -2,6 +2,16 @@
 import "../styles/global.css";
 import "../styles/starwind.css";
 import "../styles/site.css";
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = "OG — Oyster Genomics",
+  description = "The seed company for ocean protein.",
+} = Astro.props;
 ---
 
 <!doctype html>
@@ -9,7 +19,7 @@ import "../styles/site.css";
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="The seed company for ocean protein." />
+    <meta name="description" content={description} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -17,7 +27,7 @@ import "../styles/site.css";
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
-    <title>OG — Oyster Genomics</title>
+    <title>{title}</title>
   </head>
   <body class="min-h-screen overflow-x-hidden">
     <slot />
