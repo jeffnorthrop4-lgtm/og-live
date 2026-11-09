@@ -39,6 +39,23 @@ h1 {
   animation: hero-in 1s cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 
+.hero-lede {
+  max-width: 38rem;
+  margin: 1.25rem 0 0;
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 1.45;
+  letter-spacing: -0.011em;
+  animation: hero-in 1s cubic-bezier(0.16, 1, 0.3, 1) 0.12s both;
+}
+
+@media (min-width: 768px) {
+  .hero-lede {
+    margin-top: 1.5rem;
+    font-size: 1.35rem;
+  }
+}
+
 #hero-canvas {
   display: block;
   max-width: 100%;
@@ -87,7 +104,8 @@ h1 {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  h1 {
+  h1,
+  .hero-lede {
     animation: none;
   }
 }
