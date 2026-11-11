@@ -3,40 +3,53 @@ import Base from "../layouts/Base.astro";
 ---
 
 <Base>
-  <nav class="flex w-full items-center justify-between px-6 py-4 md:px-10">
-    <a href="/" class="flex h-12 w-12 items-center justify-center bg-fg" aria-label="Oyster Genomics">
-      <span class="text-base font-semibold tracking-tight text-bg">OG</span>
-    </a>
-  </nav>
-  <main class="px-6 pb-16 md:px-10 md:pb-24">
-    <h1 class="hero-title">
-      The ocean feeds billions. We’re upgrading the operating system.
-    </h1>
-    <div class="manifesto">
-      <p>
+  <section class="hero">
+    <canvas id="hero-canvas" aria-hidden="true"></canvas>
+    <div class="hero-wash" aria-hidden="true"></div>
+    <a href="/" class="mark" aria-label="Oyster Genomics"><span>OG</span></a>
+    <div class="hero-copy">
+      <h1 class="hero-title">The ocean feeds billions. We’re upgrading the operating system.</h1>
+      <p class="hero-lede">
         Land agriculture figured this out decades ago: giant monopolies weren’t built on better
-        tractors—they were built on owning the code. From Monsanto to Ohalo Genetics bypassing
+        tractors&#8288;—&#8288;they were built on owning the code. From Monsanto to Ohalo Genetics bypassing
         millions of years of plant evolution, terrestrial ag has spent fifty years engineering
         massive, compounding yield gains.
       </p>
+    </div>
+  </section>
+  <main>
+    <section class="band">
       <p>
-        Meanwhile, aquaculture—the fastest-growing animal protein sector on earth—is still largely
-        farming wild genetics and hoping for calm seas.
+        Meanwhile, aquaculture&#8288;—&#8288;the fastest-growing animal protein sector on
+        earth&#8288;—&#8288;is still largely farming wild genetics and hoping for calm seas.
       </p>
-      <p>That changes with OG.</p>
+      <p class="band-stand">That changes with OG.</p>
+    </section>
+    <section class="band">
       <p>
         We aren't just running damage control on coastal die-offs. Our Switchpoint platform treats
-        the marine genome as programmable architecture—merging precision editing, multi-omics, and
+        the marine genome as programmable architecture&#8288;—&#8288;merging precision editing, multi-omics, and
         machine learning to compress biological growth timelines, erase disease vulnerabilities, and
         double down on biomass accumulation.
       </p>
-      <p>Fewer resources. Fractions of the harvest cycle. Unstoppable yields.</p>
+    </section>
+    <section class="band band-yields">
+      <p>Fewer resources.</p>
+      <p>Fractions of the harvest cycle.</p>
+      <p>Unstoppable yields.</p>
+    </section>
+    <section class="band band-close">
       <p>We cracked the code for marine protein. The ocean is just our canvas.</p>
-    </div>
+    </section>
   </main>
-  <footer class="site-footer px-6 md:px-10">
+  <footer class="site-footer">
     <a href="mailto:jeff@oystergenomics.com" aria-label="Email Jeff at Oyster Genomics">
       Contact <span aria-hidden="true">↗</span>
     </a>
   </footer>
 </Base>
+
+<script>
+  import { startHero } from "../scripts/hero-canvas.js";
+  startHero();
+</script>
