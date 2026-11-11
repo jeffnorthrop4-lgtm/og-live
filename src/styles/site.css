@@ -9,17 +9,6 @@ body {
 }
 
 :root {
-  --rule: rgba(244, 241, 234, 0.22);
-  --hero-wash: linear-gradient(
-    180deg,
-    rgba(0, 0, 0, 0.88) 0%,
-    rgba(0, 0, 0, 0.62) 46%,
-    rgba(0, 0, 0, 0.15) 100%
-  );
-  --hero-wash-desk: linear-gradient(
-    90deg,
-    rgba(0, 0, 0, 0.88) 0%,
-    rgba(0, 0, 0, 0.55) 42%,
-    rgba(0, 0, 0, 0) 68%
-  );
+  --rule: rgba(255, 255, 255, 0.15);
+  --gutter: clamp(24px, 4.45vw, 80px);
 }
