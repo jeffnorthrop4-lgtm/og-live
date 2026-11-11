@@ -8,22 +8,35 @@ import Base from "../layouts/Base.astro";
       <span class="text-base font-semibold tracking-tight text-bg">OG</span>
     </a>
   </nav>
-  <section class="relative flex h-[calc(100svh-5rem)] items-end px-6 pb-12 md:px-10 md:pb-24">
-    <canvas id="hero-canvas" class="pointer-events-none absolute inset-0 h-full w-full"></canvas>
-    <div class="hero-copy relative z-10">
-      <h1 class="hero-title">
-        Accelerating<br class="md:hidden" /> evolution to unlock<br /><span class="text-og">the ocean's potential.</span>
-      </h1>
+  <main class="px-6 pb-16 md:px-10 md:pb-24">
+    <h1 class="hero-title">
+      The ocean feeds billions. We’re upgrading the operating system.
+    </h1>
+    <div class="manifesto">
+      <p>
+        Land agriculture figured this out decades ago: giant monopolies weren’t built on better
+        tractors—they were built on owning the code. From Monsanto to Ohalo Genetics bypassing
+        millions of years of plant evolution, terrestrial ag has spent fifty years engineering
+        massive, compounding yield gains.
+      </p>
+      <p>
+        Meanwhile, aquaculture—the fastest-growing animal protein sector on earth—is still largely
+        farming wild genetics and hoping for calm seas.
+      </p>
+      <p>That changes with OG.</p>
+      <p>
+        We aren't just running damage control on coastal die-offs. Our Switchpoint platform treats
+        the marine genome as programmable architecture—merging precision editing, multi-omics, and
+        machine learning to compress biological growth timelines, erase disease vulnerabilities, and
+        double down on biomass accumulation.
+      </p>
+      <p>Fewer resources. Fractions of the harvest cycle. Unstoppable yields.</p>
+      <p>We cracked the code for marine protein. The ocean is just our canvas.</p>
     </div>
-  </section>
+  </main>
   <footer class="site-footer px-6 md:px-10">
     <a href="mailto:jeff@oystergenomics.com" aria-label="Email Jeff at Oyster Genomics">
       Contact <span aria-hidden="true">↗</span>
     </a>
   </footer>
 </Base>
-
-<script>
-  import { startHero } from "../scripts/hero-canvas.js";
-  startHero();
-</script>
