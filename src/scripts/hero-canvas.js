@@ -36,7 +36,7 @@ export function startHero() {
     if (width >= 720) return { cx: cluster.cx, cy: cluster.cy };
     return {
       cx: Math.min(0.86, Math.max(0.14, 0.5 + (cluster.cx - 0.74) * 1.8)),
-      cy: 0.78 + (cluster.cy - 0.45) * 0.32,
+      cy: 0.9 + (cluster.cy - 0.45) * 0.18,
     };
   }
 
